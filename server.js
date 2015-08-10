@@ -50,10 +50,12 @@ app.post('/api/send_text_message', function (req, res) {
     client.messages.create({ 
 	to: "2395657035", 
 	from: "+12393301952", 
-	body: "req.body.message",   
+	body: req.body.message,   
 }, function(err, message) { 
 	console.log(message.sid); 
 });
+
+    
     res.send();
 });
  
